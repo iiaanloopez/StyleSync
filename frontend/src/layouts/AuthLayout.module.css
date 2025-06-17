@@ -1,0 +1,59 @@
+/* frontend/src/layouts/AuthLayout.module.css */
+
+.authLayoutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--background-dark) 100%); /* Gradiente de fondo atractivo */
+    padding: var(--spacing-md); /* Espaciado general */
+    color: var(--text-color-light); /* Color de texto para el fondo oscuro */
+  }
+  
+  .authCard {
+    background-color: white; /* Fondo blanco para la tarjeta de autenticación */
+    padding: var(--spacing-xl); /* Relleno generoso */
+    border-radius: var(--border-radius-lg); /* Bordes redondeados */
+    box-shadow: var(--shadow-md); /* Sombra para dar profundidad */
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Ancho máximo para la tarjeta de autenticación */
+    animation: fadeIn 0.5s ease-out; /* Animación de entrada suave */
+  }
+  
+  .authTitle {
+    color: var(--primary-color); /* Color de título principal */
+    margin-bottom: var(--spacing-lg);
+    font-size: 2em;
+    font-weight: 700;
+  }
+  
+  .authFooter {
+    margin-top: var(--spacing-lg);
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Texto más claro para el pie de página */
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .authCard {
+      padding: var(--spacing-lg);
+    }
+    .authTitle {
+      font-size: 1.8em;
+    }
+  }
+  

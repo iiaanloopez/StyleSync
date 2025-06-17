@@ -1,0 +1,149 @@
+/* frontend/src/pages/BarberProfile/BarberProfilePage.module.css */
+
+.profileContainer {
+    padding: var(--spacing-xl);
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .loadingContainer, .errorContainer, .notFoundContainer {
+    text-align: center;
+    padding: var(--spacing-xl);
+    font-size: 1.2rem;
+    color: var(--text-color-dark);
+  }
+  
+  .errorContainer {
+    color: var(--error-color);
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  }
+  
+  .profileImage {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--border-radius-lg); /* Más redondeado para la imagen de perfil */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 3px solid var(--primary-color);
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+  }
+  
+  .headerInfo {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+  }
+  
+  .shopName {
+    font-size: 2.5rem;
+    color: var(--text-color-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .address, .phone, .rating, .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .description {
+    margin-top: var(--spacing-md);
+    line-height: 1.6;
+  }
+  
+  .servicesSection, .reviewsSection, .availabilitySection {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .serviceCard {
+    background-color: #f9f9f9;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-xs);
+    text-align: left;
+  }
+  
+  .serviceCard h3 {
+    color: var(--text-color-dark);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .serviceCard p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .servicePrice {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  .serviceDuration {
+    font-style: italic;
+    color: #777;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profileHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profileImage {
+      margin-bottom: var(--spacing-md);
+    }
+    .shopName {
+      font-size: 2rem;
+    }
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+    .profileContainer {
+      padding: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profileImage {
+      width: 150px;
+      height: 150px;
+    }
+    .shopName {
+      font-size: 1.8rem;
+    }
+    .sectionTitle {
+      font-size: 1.5rem;
+    }
+    .servicesGrid {
+      grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+  }
+  

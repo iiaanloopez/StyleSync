@@ -1,0 +1,61 @@
+/* frontend/src/components/InputField/InputField.module.css */
+
+.inputGroup {
+    margin-bottom: var(--spacing-md);
+    text-align: left; /* Alinea la etiqueta y el input a la izquierda */
+  }
+  
+  .label {
+    display: block; /* Asegura que la etiqueta esté en su propia línea */
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-color-dark);
+    font-size: 0.95rem;
+  }
+  
+  .required {
+    color: var(--error-color); /* Color para el asterisco de requerido */
+    margin-left: 4px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2); /* Sombra suave al enfocar */
+  }
+  
+  .inputError {
+    border-color: var(--error-color); /* Borde rojo si hay un error */
+  }
+  
+  .errorMessage {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+    .label {
+      font-size: 0.9rem;
+    }
+    .errorMessage {
+      font-size: 0.8rem;
+    }
+  }
+  

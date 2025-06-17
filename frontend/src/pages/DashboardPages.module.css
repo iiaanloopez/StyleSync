@@ -1,0 +1,77 @@
+/* frontend/src/pages/DashboardPages.module.css */
+
+.dashboardContainer {
+    padding: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .dashboardTitle {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .dashboardSubtitle {
+    font-size: 1.2rem;
+    color: var(--text-color-dark);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  .dashboardContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas adaptables */
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .dashboardSection {
+    background-color: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: var(--text-color-dark);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .dashboardSection p {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboardContainer {
+      padding: var(--spacing-md);
+    }
+    .dashboardTitle {
+      font-size: 2.2rem;
+    }
+    .dashboardSubtitle {
+      font-size: 1rem;
+    }
+    .dashboardContent {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+    .dashboardSection {
+      padding: var(--spacing-lg);
+    }
+    .sectionTitle {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboardTitle {
+      font-size: 1.8rem;
+    }
+  }
+  

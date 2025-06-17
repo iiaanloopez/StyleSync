@@ -1,0 +1,103 @@
+/* frontend/src/components/Navbar/Navbar.module.css */
+
+.navbar {
+    background-color: var(--background-dark); /* Color de fondo oscuro para la barra de navegación */
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between; /* Espacia el logo y los enlaces */
+    align-items: center;
+    color: var(--text-color-light); /* Color de texto claro */
+    box-shadow: var(--shadow-sm); /* Sombra sutil */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  }
+  
+  .navbarBrand {
+    flex-shrink: 0; /* Evita que el logo se encoja */
+  }
+  
+  .navbarLogo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbarNav {
+    display: flex;
+    align-items: center;
+    list-style: none; /* Remueve los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Permite que los elementos de navegación se envuelvan */
+  }
+  
+  .navItem {
+    margin-left: var(--spacing-lg); /* Espaciado entre elementos de navegación */
+    display: flex; /* Para alinear el texto de bienvenida y el botón */
+    align-items: center;
+  }
+  
+  .navLink {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Ligero fondo al pasar el ratón */
+    text-decoration: none; /* Asegura que no haya subrayado al pasar el ratón */
+  }
+  
+  .welcomeText {
+    margin-right: var(--spacing-sm);
+    font-size: 1rem;
+    color: var(--text-color-light);
+  }
+  
+  .logoutButton {
+    /* Estilos específicos para el botón de cerrar sesión */
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.9rem;
+    min-width: unset; /* Permite que el botón sea más pequeño */
+  }
+  
+  /* Ajustes responsivos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Apila el logo y la navegación verticalmente */
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+  
+    .navbarBrand {
+      margin-bottom: var(--spacing-md); /* Espacio entre el logo y los enlaces */
+    }
+  
+    .navbarNav {
+      flex-direction: column; /* Apila los enlaces verticalmente */
+      width: 100%; /* Ocupa todo el ancho disponible */
+      align-items: flex-start; /* Alinea los enlaces a la izquierda */
+    }
+  
+    .navItem {
+      margin: var(--spacing-xs) 0; /* Menos margen vertical */
+      width: 100%; /* Cada elemento de navegación ocupa todo el ancho */
+    }
+  
+    .navLink, .welcomeText {
+      display: block; /* Asegura que los enlaces y texto ocupen todo el ancho */
+      width: 100%;
+      padding: var(--spacing-sm); /* Más padding para facilitar el toque en móvil */
+      text-align: left;
+    }
+  
+    .logoutButton {
+      width: 100%; /* El botón ocupa todo el ancho en móvil */
+      margin-top: var(--spacing-sm);
+      text-align: center;
+    }
+  }
+  

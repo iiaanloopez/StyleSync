@@ -1,0 +1,90 @@
+/* frontend/src/assets/styles/global.css */
+
+/* Importa la fuente Inter de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Reseteo Básico --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Aplica la fuente Inter */
+  line-height: 1.6;
+  background-color: #f4f7f6; /* Un color de fondo suave */
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Estilos Generales --- */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  color: #2c3e50; /* Un color de título más oscuro */
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #3498db; /* Color de enlace azul */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Estilos para formularios y elementos interactivos */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordes redondeados */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Contenedor principal de la aplicación para centrar contenido */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

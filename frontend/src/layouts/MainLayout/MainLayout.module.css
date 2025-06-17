@@ -1,0 +1,27 @@
+/* frontend/src/layouts/MainLayout/MainLayout.module.css */
+
+.mainLayoutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+    background-color: var(--background-light); /* Usa la variable global de color */
+    color: var(--text-color-dark); /* Usa la variable global de color */
+  }
+  
+  .mainContent {
+    flex-grow: 1; /* Permite que el contenido principal ocupe todo el espacio disponible */
+    padding: var(--spacing-lg); /* Espaciado interno general */
+    max-width: 1200px; /* Ancho máximo para el contenido para mejor legibilidad */
+    margin: 0 auto; /* Centra el contenido en la página */
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible dentro del max-width */
+  }
+  
+  .footer {
+    background-color: var(--background-dark); /* Usa la variable global de color */
+    color: var(--text-color-light); /* Usa la variable global de color */
+    padding: var(--spacing-md);
+    text-align: center;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    width: 100%;
+  }
+  

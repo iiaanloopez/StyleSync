@@ -1,0 +1,61 @@
+/* frontend/src/pages/Auth/AuthPages.module.css */
+
+.authFormContainer {
+    /* No establecemos ancho fijo aquí, el layout ya lo maneja */
+    padding: 0; /* Quitamos padding aquí, ya lo tiene el AuthLayout */
+    /* Reset de estilos del AuthCard si es necesario, o solo para el contenido */
+  }
+  
+  .authFormTitle {
+    color: var(--text-color-dark); /* Color de título dentro de la tarjeta (blanco) */
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  
+  .errorMessage {
+    color: var(--error-color);
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid var(--error-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .submitButton {
+    width: 100%; /* El botón ocupa todo el ancho */
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .authLinkText {
+    margin-top: var(--spacing-md);
+    font-size: 0.9em;
+    color: var(--text-color-dark);
+  }
+  
+  .authLink {
+    color: var(--primary-color); /* Color de enlace */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .authLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 600px) {
+    .authFormTitle {
+      font-size: 1.5em;
+    }
+    .submitButton {
+      padding: var(--spacing-sm);
+      font-size: 1rem;
+    }
+  }
+  
